@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: 
+
+Sitemap: https://patrikvalentiny.work/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+
+# Archive crawlers
+User-agent: Archive.org_bot
+Disallow: /

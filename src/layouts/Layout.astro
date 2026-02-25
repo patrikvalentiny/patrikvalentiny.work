@@ -1,23 +1,143 @@
+---
+import "../assets/app.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#000000" />
+
+		<!-- SEO Meta Tags -->
+		<title>
+			Patrik Valentiny | Developer, Videographer & Creative Lead in
+			Esbjerg, Denmark
+		</title>
+		<meta
+			name="description"
+			content="Portfolio of Patrik Valentiny"
+		/>
+		<meta
+			name="keywords"
+			content="developer, videographer, photographer, creative lead, esbjerg, denmark, video production, portfolio"
+		/>
+		<meta name="author" content="Patrik Valentiny" />
+		<meta
+			name="copyright"
+			content="© 2026 Patrik Valentiny. All rights reserved."
+		/>
+		<meta
+			name="robots"
+			content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+		/>
+		<meta name="language" content="English" />
+		<meta name="revisit-after" content="7 days" />
+		<link rel="canonical" href="https://patrikvalentiny.work" />
+
+		<!-- Geo Tags -->
+		<meta name="geo.placename" content="Esbjerg" />
+		<meta name="geo.region" content="DK" />
+		<meta name="geo.position" content="55.466667;8.45" />
+		<meta name="ICBM" content="55.466667, 8.45" />
+
+		<!-- Open Graph / Social Meta Tags -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://patrikvalentiny.work/" />
+		<meta
+			property="og:title"
+			content="patrikvalentiny.work"
+		/>
+		<meta
+			property="og:description"
+			content="Portfolio showcasing web development, video production, photography, and creative direction work. Based in Esbjerg, Denmark."
+		/>
+		<meta
+			property="og:image"
+			content="https://patrikvalentiny.work/og-image.jpg"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:locale:alternate" content="da_DK" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://patrikvalentiny.work/" />
+		<meta
+			name="twitter:title"
+			content="Patrik Valentiny | Developer, Videographer & Creative Lead"
+		/>
+		<meta
+			name="twitter:description"
+			content="Portfolio of creative work: web development, video production, photography & creative direction."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://patrikvalentiny.work/og-image.jpg"
+		/>
+
+		<!-- Icons and Branding -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<!-- JSON-LD Schema Markup -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Patrik Valentiny",
+				"url": "https://patrikvalentiny.work",
+				"sameAs": [
+					"https://www.linkedin.com/in/patrik-valentiny/",
+					"https://github.com/patrikvalentiny"
+				],
+				"jobTitle": "Developer, Videographer, Photographer & Creative Lead",
+				"worksFor": {
+					"@type": "SelfEmployed"
+				},
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Esbjerg",
+					"addressRegion": "Region of Southern Denmark",
+					"addressCountry": "DK"
+				},
+				"knowsAbout": [
+					"Web Development",
+					"Video Production",
+					"Photography",
+					"Creative Direction",
+					"Astro",
+					"React",
+					"TypeScript"
+				],
+				"image": "https://patrikvalentiny.work/profile-image.jpg"
+			}
+		</script>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "Patrik Valentiny Portfolio",
+				"url": "https://patrikvalentiny.work",
+				"description": "Portfolio of Patrik Valentiny - Developer, videographer, photographer, and creative lead based in Esbjerg, Denmark",
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": {
+						"@type": "EntryPoint",
+						"urlTemplate": "https://patrikvalentiny.work/search?q={search_term_string}"
+					},
+					"query-input": "required name=search_term_string"
+				}
+			}
+		</script>
+
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="min-h-screen bg-base-100 text-base-content">
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

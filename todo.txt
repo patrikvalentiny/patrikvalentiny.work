@@ -1,0 +1,74 @@
+SEO & Portfolio Launch - Next Steps
+====================================
+
+PRIORITY: HIGH
+[ ] Add social profile URLs to JSON-LD schema
+    - Update LinkedIn URL in Layout.astro
+    - Update GitHub URL in Layout.astro
+
+[ ] Create OG image for social sharing
+    - Size: 1200x630px
+    - File: public/og-image.jpg
+    - Used for: LinkedIn, Twitter, Facebook previews
+
+[ ] Create profile image
+    - Size: 400x400px minimum
+    - File: public/profile-image.jpg
+    - Used for: Schema markup and potential about section
+
+[ ] Add Apple touch icon
+    - Size: 180x180px
+    - File: public/apple-touch-icon.png
+    - Used for: iOS home screen shortcuts
+
+PRIORITY: MEDIUM
+[ ] Update email contact form (when built)
+    - Use: hello@patrikvalentiny.work
+    - Consider: Add email validation and notification setup
+
+[ ] Create individual pages/routes for portfolio categories:
+    - /work/development
+    - /work/videography
+    - /work/photography
+    - /work/creative-direction
+
+[ ] Add case studies or project showcase
+    - Include alt text for all images
+    - Add structured data for CreativeWork
+
+[ ] Create About page with full bio
+    - Expand on expertise
+    - Add testimonials if applicable
+    - Include technical skills
+
+PRIORITY: LOW
+[ ] Set up analytics (Google Analytics 4)
+    - Track visitor behavior
+    - Monitor search console performance
+
+[ ] Create blog section for content marketing
+    - Post about web development, videography, photography
+    - Improves SEO through fresh content
+
+[ ] Submit to Google Search Console
+    - Verify domain ownership
+    - Submit sitemap
+    - Monitor search performance
+
+[ ] Submit to Bing Webmaster Tools
+    - Additional search engine visibility
+
+DEPLOYMENT
+[ ] Test all meta tags with:
+    - Facebook Share Debugger
+    - Twitter Card Validator
+    - Google Rich Results Test
+
+[ ] Deploy to production at patrikvalentiny.work
+    - Verify all meta tags rendering correctly
+    - Check robots.txt and sitemap accessibility
+
+[ ] Monitor after launch
+    - Check Google Search Console for indexing
+    - Monitor for crawl errors
+    - Track rankings over time
