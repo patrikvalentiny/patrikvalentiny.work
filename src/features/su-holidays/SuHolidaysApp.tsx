@@ -24,6 +24,11 @@ export default function SuHolidaysApp() {
                     <section className="prose prose-sm max-w-none mt-12 text-base-content/80 bg-base-100 p-6 rounded-lg shadow-sm">
                         <h2 className="text-xl font-bold mb-4">About the SU Holiday Request Form Generator</h2>
                         <p className="mb-4">
+                            Fill in your details, download the PDF, get your employer to sign it, then upload the signed form at{' '}
+                            <a href="https://www.su.dk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">SU.dk</a>{' '}
+                            and register the holiday period.
+                        </p>
+                        <p className="mb-4">
                             This free tool helps employees in Denmark easily generate a professional holiday request form (ferie formular) as a PDF document.
                             Whether you are applying for your regular vacation days, SU holiday, or other types of leave, this generator ensures your employer
                             receives all the necessary information in a standardized format.

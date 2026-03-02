@@ -16,7 +16,7 @@ export const HolidayDatesSection: React.FC<HolidayDatesSectionProps> = ({ data, 
 
     return (
         <FormSection title="Holiday Dates" isValid={isValid}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-4 m-0">
                 <FormInput
                     type="date"
                     name="fromDate"
