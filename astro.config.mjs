@@ -7,4 +7,9 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     // @ts-ignore
     integrations: [react(), tailwindcss()],
+    vite: {
+        ssr: {
+            noExternal: ['@react-pdf/renderer'],
+        },
+    },
 });

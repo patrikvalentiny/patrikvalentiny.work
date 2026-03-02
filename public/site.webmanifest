@@ -1,7 +1,7 @@
 {
     "name": "Patrik Valentiny Portfolio",
     "short_name": "Patrik V.",
-    "description": "Portfolio of Patrik Valentiny - Developer, videographer, photographer, and creative lead based in Esbjerg, Denmark",
+    "description": "Portfolio and works of Patrik Valentiny",
     "start_url": "https://patrikvalentiny.work/",
     "scope": "/",
     "display": "standalone",
@@ -22,7 +22,8 @@
     ],
     "categories": [
         "business",
-        "portfolio"
+        "portfolio",
+        "personal"
     ],
     "screenshots": []
 }

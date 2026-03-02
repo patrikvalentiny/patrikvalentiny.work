@@ -14,10 +14,7 @@ import "../assets/app.css";
 			Patrik Valentiny | Developer, Videographer & Creative Lead in
 			Esbjerg, Denmark
 		</title>
-		<meta
-			name="description"
-			content="Portfolio of Patrik Valentiny"
-		/>
+		<meta name="description" content="Portfolio and works of Patrik Valentiny" />
 		<meta
 			name="keywords"
 			content="developer, videographer, photographer, creative lead, esbjerg, denmark, video production, portfolio"
@@ -44,10 +41,7 @@ import "../assets/app.css";
 		<!-- Open Graph / Social Meta Tags -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://patrikvalentiny.work/" />
-		<meta
-			property="og:title"
-			content="patrikvalentiny.work"
-		/>
+		<meta property="og:title" content="patrikvalentiny.work" />
 		<meta
 			property="og:description"
 			content="Portfolio showcasing web development, video production, photography, and creative direction work. Based in Esbjerg, Denmark."
@@ -136,6 +130,16 @@ import "../assets/app.css";
 		</script>
 
 		<meta name="generator" content={Astro.generator} />
+
+		{
+			import.meta.env.PROD && (
+				<script
+					defer
+					src="https://cloud.umami.is/script.js"
+					data-website-id="21bd8d9b-2cc0-4665-9503-426b16821f4b"
+				/>
+			)
+		}
 	</head>
 	<body class="min-h-screen bg-base-100 text-base-content">
 		<slot />

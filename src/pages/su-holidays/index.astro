@@ -1,0 +1,113 @@
+---
+import "../../assets/app.css";
+import SuHolidaysApp from "../../features/su-holidays/SuHolidaysApp";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#000000" />
+
+        <!-- SEO Meta Tags -->
+        <title>SU Holiday Request Form Generator | patrikvalentiny.work</title>
+        <meta
+            name="description"
+            content="Free tool to generate a professional SU holiday request PDF form for employees in Denmark. Fill in your details and download instantly."
+        />
+        <meta
+            name="keywords"
+            content="SU holiday, ferie formular, holiday request form, Denmark, PDF generator, CPR, CVR"
+        />
+        <meta name="author" content="Patrik Valentiny" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://patrikvalentiny.work/su-holidays" />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://patrikvalentiny.work/su-holidays"
+        />
+        <meta
+            property="og:title"
+            content="SU Holiday Request Form Generator | patrikvalentiny.work"
+        />
+        <meta
+            property="og:description"
+            content="Free tool to generate a professional SU holiday request PDF form for employees in Denmark. Fill in your details and download instantly."
+        />
+        <meta
+            property="og:image"
+            content="https://patrikvalentiny.work/og-image.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="patrikvalentiny.work" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:url"
+            content="https://patrikvalentiny.work/su-holidays"
+        />
+        <meta
+            name="twitter:title"
+            content="SU Holiday Request Form Generator"
+        />
+        <meta
+            name="twitter:description"
+            content="Free tool to generate a professional SU holiday request PDF form for employees in Denmark."
+        />
+        <meta
+            name="twitter:image"
+            content="https://patrikvalentiny.work/og-image.jpg"
+        />
+
+        <!-- JSON-LD -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "SU Holiday Request Form Generator",
+                "url": "https://patrikvalentiny.work/su-holidays",
+                "description": "Free tool to generate a professional SU holiday request PDF form for employees in Denmark.",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "DKK"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Patrik Valentiny",
+                    "url": "https://patrikvalentiny.work"
+                }
+            }
+        </script>
+
+        <!-- Icons -->
+        <link rel="icon" type="image/svg+xml" href="/sea-sun.svg" />
+        <link rel="icon" href="/sea-sun.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <meta name="generator" content={Astro.generator} />
+
+        {
+            import.meta.env.PROD && (
+                <script
+                    defer
+                    src="https://cloud.umami.is/script.js"
+                    data-website-id="21bd8d9b-2cc0-4665-9503-426b16821f4b"
+                />
+            )
+        }
+    </head>
+    <body class="min-h-screen bg-base-200 text-base-content">
+        <SuHolidaysApp client:only="react" />
+    </body>
+</html>
