@@ -2,14 +2,14 @@ import { Github, Instagram, Linkedin } from "iconoir-react";
 
 const socialLinks = [
     {
-        label: "GitHub",
-        href: "https://github.com/patrikvalentiny",
-        icon: Github,
-    },
-    {
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/patrikvalentiny/",
         icon: Linkedin,
+    },
+    {
+        label: "GitHub",
+        href: "https://github.com/patrikvalentiny",
+        icon: Github,
     },
     {
         label: "Instagram",
@@ -93,7 +93,7 @@ export default function MinimalistHomepage(): JSX.Element {
                     <aside className="relative flex min-h-96 items-center justify-center lg:min-h-144">
                         <div className="relative flex h-88 w-full max-w-96 items-end overflow-hidden border border-base-content/10 bg-base-100 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:h-112 sm:max-w-md">
                             <img
-                                src="/profile-picture.jpg"
+                                src="/profile-image.jpg"
                                 alt="Portrait of Patrik Valentiny"
                                 className="absolute inset-0 h-full w-full object-cover object-center"
                             />
