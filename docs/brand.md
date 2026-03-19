@@ -1,4 +1,4 @@
-# Brand Identity: The Performance Architect
+# Brand Identity: Patrik Valentiny (Performance Architect)
 
 The Performance Architect is a high-octane personal brand identity that fuses Slovakian grit with Danish minimalism. It is designed for a 23-year-old Digitalization Engineer and Software Engineering student who operates at the intersection of technical logic, athletic endurance, and cinematic storytelling.
 

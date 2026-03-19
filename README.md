@@ -1,46 +1,60 @@
-# Astro Starter Kit: Basics
+# patrikvalentiny.work
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Portfolio and utility site for Patrik Valentiny, built with Astro and React.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## What is included
 
-## 🚀 Project Structure
+- A minimalist landing page with links to selected work and social profiles
+- A brand identity board for the visual system behind the site
+- An SU holiday request form generator that produces a downloadable PDF
 
-Inside of your Astro project, you'll see the following folders and files:
+## Live routes
+
+- `/` - personal landing page
+- `/brand-identity` - brand identity board
+- `/su-holidays` - SU holiday request form generator
+
+## Tech stack
+
+- Astro 6
+- React 18
+- Tailwind CSS 4
+- daisyUI 5
+- `@react-pdf/renderer`
+- TypeScript
+
+## Project structure
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+src/
+├── assets/            global styles
+├── components/        shared React components
+├── features/          feature-specific app logic
+│   └── su-holidays/   PDF generator and request form
+├── layouts/           Astro layout wrappers
+└── pages/             route entry points
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Getting started
 
-## 🧞 Commands
+```sh
+pnpm install
+pnpm dev
+```
 
-All commands are run from the root of the project, from a terminal:
+The development server runs at <http://localhost:4321>.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## Scripts
 
-## 👀 Want to learn more?
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start the local development server |
+| `pnpm build` | Build the site for production |
+| `pnpm preview` | Preview the production build locally |
+| `pnpm astro` | Run Astro CLI commands |
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Notes
+
+- The SU holidays page is rendered client-side with React.
+- Site metadata, social cards, and icons are configured per route.
+- The project uses daisyUI for most UI styling, with Tailwind utility classes for layout and spacing.
