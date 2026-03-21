@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@plugin "daisyui";
+@plugin "daisyui"
+{
+  themes: light --default, dark --prefersdark;
+};
 
 @theme {
   /* This creates the .font-bebas utility */
@@ -31,8 +34,6 @@
 
 @plugin "daisyui/theme" {
   name: "performanceDark";
-  default: true;
-  prefersdark: true;
   color-scheme: "dark";
 
   /* The Obsidian Base Hierarchy */
@@ -42,7 +43,7 @@
   --color-base-content: oklch(100% 0 0);      /* Stark White */
 
   /* Brand Core */
-  --color-primary: oklch(58.8% 0.1 76.5);     /* Industrial Bronze */
+  --color-primary: oklch(0.8782 0.0877 66.27);
   --color-primary-content: oklch(100% 0 0);
   
   --color-secondary: oklch(26.65% 0 0);       /* Charcoal Structural */

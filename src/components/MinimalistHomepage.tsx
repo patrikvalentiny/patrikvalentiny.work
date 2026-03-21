@@ -50,7 +50,7 @@ export default function MinimalistHomepage(): JSX.Element {
 
                 <div className="grid flex-1 items-center gap-10 pb-10 pt-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 lg:pt-0">
                     <div className="max-w-5xl space-y-8">
-                        <h1 className="max-w-4xl text-balance text-[clamp(4.25rem,14vw,10rem)] uppercase leading-[0.9] tracking-[-0.05em] text-transparent bg-clip-text bg-linear-to-r from-[#f7c590] via-accent to-[#ff5e87]">
+                        <h1 className="max-w-4xl text-balance text-[clamp(4.25rem,14vw,10rem)] uppercase leading-[0.9] tracking-[-0.05em] text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-accent/50">
                             Creating the unknown.
                         </h1>
 

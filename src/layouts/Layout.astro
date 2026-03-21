@@ -1,22 +1,32 @@
 ---
 import "../assets/app.css";
+
+interface Props {
+	title?: string;
+	description?: string;
+	canonical?: string;
+	image?: string;
+	theme?: string;
+}
+
+const {
+	title = "Patrik Valentiny | Developer and creative technologist based in Esbjerg, Denmark",
+	description = "Portfolio and works of Patrik Valentiny",
+	canonical = "https://patrikvalentiny.work",
+	image = "https://patrikvalentiny.work/og-image.jpg",
+	theme,
+} = Astro.props as Props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" {...theme ? { "data-theme": theme } : {}}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="theme-color" content="#000000" />
 
-		<!-- SEO Meta Tags -->
-		<title>
-			Patrik Valentiny | Developer and creative technologist based in Esbjerg, Denmark
-		</title>
-		<meta
-			name="description"
-			content="Portfolio and works of Patrik Valentiny"
-		/>
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<meta
 			name="keywords"
 			content="developer, videographer, photographer, creative technologist, creative lead, esbjerg, denmark, video production, portfolio"
@@ -32,54 +42,34 @@ import "../assets/app.css";
 		/>
 		<meta name="language" content="English" />
 		<meta name="revisit-after" content="7 days" />
-		<link rel="canonical" href="https://patrikvalentiny.work" />
+		<link rel="canonical" href={canonical} />
 
-		<!-- Geo Tags -->
 		<meta name="geo.placename" content="Esbjerg" />
 		<meta name="geo.region" content="DK" />
 		<meta name="geo.position" content="55.466667;8.45" />
 		<meta name="ICBM" content="55.466667, 8.45" />
 
-		<!-- Open Graph / Social Meta Tags -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://patrikvalentiny.work/" />
-		<meta property="og:title" content="patrikvalentiny.work" />
-		<meta
-			property="og:description"
-			content="Portfolio showcasing web development, video production, photography, and creative direction work. Based in Esbjerg, Denmark."
-		/>
-		<meta
-			property="og:image"
-			content="https://patrikvalentiny.work/og-image.jpg"
-		/>
+		<meta property="og:url" content={canonical} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:locale:alternate" content="da_DK" />
 
-		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:url" content="https://patrikvalentiny.work/" />
-		<meta
-			name="twitter:title"
-			content="Patrik Valentiny | Developer and creative technologist based in Esbjerg, Denmark"
-		/>
-		<meta
-			name="twitter:description"
-			content="Portfolio of creative work: web development, video production, photography & creative direction."
-		/>
-		<meta
-			name="twitter:image"
-			content="https://patrikvalentiny.work/og-image.jpg"
-		/>
+		<meta name="twitter:url" content={canonical} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
 
-		<!-- Icons and Branding -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/site.webmanifest" />
 
-		<!-- JSON-LD Schema Markup -->
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
