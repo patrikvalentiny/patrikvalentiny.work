@@ -30,7 +30,12 @@ const socialButtonClass = "btn btn-ghost";
 
 export default function MinimalistHomepage(): JSX.Element {
     return (
-        <main className={shellClass}>
+        <main className={shellClass}
+            style={{
+                backgroundImage:
+                    "radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--color-primary) 14%, transparent) 1px, transparent 0)",
+                backgroundSize: "26px 26px",
+            }}>
             <div className={gridTextureClass} />
             <div className={topGlowClass} />
             <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-between px-5 py-6 sm:px-8 lg:px-10">
@@ -89,18 +94,27 @@ export default function MinimalistHomepage(): JSX.Element {
                             })}
                         </div>
                     </div>
-
-                    <aside className="relative flex min-h-96 items-center justify-center lg:min-h-144">
-                        <div className="relative flex h-88 w-full max-w-96 items-end overflow-hidden border border-base-content/10 bg-base-100 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:h-112 sm:max-w-md">
-                            <img
-                                src="/profile-image.jpg"
-                                alt="Portrait of Patrik Valentiny"
-                                className="absolute inset-0 h-full w-full object-cover object-center"
-                            />
-                            <div className="absolute inset-0 bg-linear-to-br from-base-100/25 via-accent/10 to-error/15" />
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(255,90,123,0.18),transparent_36%),radial-gradient(circle_at_30%_75%,rgba(248,197,143,0.14),transparent_40%)]" />
+                    <div className="flex justify-center lg:justify-end">
+                        <div className="hover-3d w-full max-w-96">
+                            <figure className="relative flex h-88 w-full items-end overflow-hidden rounded-2xl border border-base-content/10 bg-base-100 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:h-112 sm:max-w-md">
+                                <img
+                                    src="/profile-image.jpg"
+                                    alt="Portrait of Patrik Valentiny"
+                                    className="absolute inset-0 h-full w-full object-cover object-center"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-br from-base-100/25 via-accent/10 to-error/15" />
+                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(255,90,123,0.18),transparent_36%),radial-gradient(circle_at_30%_75%,rgba(248,197,143,0.14),transparent_40%)]" />
+                            </figure>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
                         </div>
-                    </aside>
+                    </div>
                 </div>
             </section>
         </main>

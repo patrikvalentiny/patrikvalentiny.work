@@ -2,9 +2,12 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "daisyui"
-{
+
+  {
   themes: light --default, dark --prefersdark;
-};
+}
+
+;
 
 @theme {
   /* This creates the .font-bebas utility */
@@ -18,16 +21,26 @@
 }
 
 @layer base {
-  h1, h2, h3, h4, .btn {
-    @apply font-bebas tracking-wider; /* "Bebas" looks best with a little extra letter spacing */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .btn {
+    @apply font-bebas tracking-wider;
+    /* "Bebas" looks best with a little extra letter spacing */
   }
 
   body {
-    @apply font-sans antialiased; /* "Inter" handles the clean Danish minimalism */
+    @apply font-sans antialiased;
+    /* "Inter" handles the clean Danish minimalism */
   }
 
-  pre, code, .technical-spec {
-    @apply font-mono; /* "JetBrains Mono" handles the Engineering side */
+  pre,
+  code,
+  .technical-spec {
+    @apply font-mono;
+    /* "JetBrains Mono" handles the Engineering side */
   }
 }
 
@@ -37,43 +50,50 @@
   color-scheme: "dark";
 
   /* The Obsidian Base Hierarchy */
-  --color-base-100: oklch(17.76% 0 0);        /* #121212 Obsidian Matte */
-  --color-base-200: oklch(24% 0 0);           /* Section contrast */
-  --color-base-300: oklch(30% 0 0);           /* Hover state */
-  --color-base-content: oklch(100% 0 0);      /* Stark White */
+  --color-base-100: oklch(17.76% 0 0);
+  /* #121212 Obsidian Matte */
+  --color-base-200: oklch(24% 0 0);
+  /* Section contrast */
+  --color-base-300: oklch(30% 0 0);
+  /* Hover state */
+  --color-base-content: oklch(100% 0 0);
+  /* Stark White */
 
   /* Brand Core */
   --color-primary: oklch(0.8782 0.0877 66.27);
   --color-primary-content: oklch(100% 0 0);
-  
-  --color-secondary: oklch(26.65% 0 0);       /* Charcoal Structural */
+
+  --color-secondary: oklch(26.65% 0 0);
+  /* Charcoal Structural */
   --color-secondary-content: oklch(100% 0 0);
 
-  --color-accent: oklch(63.38% 0.254 13.3);   /* Roubaix Pink */
+  --color-accent: oklch(63.38% 0.254 13.3);
+  /* Roubaix Pink */
   --color-accent-content: oklch(100% 0 0);
 
-  --color-neutral: oklch(100% 0 0);           /* High-contrast Neutral */
+  --color-neutral: oklch(100% 0 0);
+  /* High-contrast Neutral */
   --color-neutral-content: oklch(17.76% 0 0);
 
   /* Technical Status Colors (The "Indicators") */
   /* Info: "Telemetry Blue" - Cold, technical slate for data/software stats */
-  --color-info: oklch(75% 0.1 230);           
+  --color-info: oklch(75% 0.1 230);
   --color-info-content: oklch(10% 0 0);
 
   /* Success: "Nitrogen Green" - Cool, minty technical green for "System Optimal" */
-  --color-success: oklch(78% 0.14 165);       
+  --color-success: oklch(78% 0.14 165);
   --color-success-content: oklch(10% 0 0);
 
   /* Warning: "Hazard Orange" - Sharp, industrial orange for "High Intensity" alerts */
-  --color-warning: oklch(75% 0.22 55);        
+  --color-warning: oklch(75% 0.22 55);
   --color-warning-content: oklch(10% 0 0);
 
   /* Error: "Adrenaline Spike" - Using the brand Pink as the error state */
-  --color-error: oklch(63.38% 0.254 13.3);    
+  --color-error: oklch(63.38% 0.254 13.3);
   --color-error-content: oklch(100% 0 0);
 
   /* Industrial Geometry */
---radius-selector: 0.2rem;
+  --radius-selector: 0.2rem;
   --radius-field: 0.1rem;
   --radius-box: 0.2rem;
   --size-selector: 0.25rem;
@@ -81,4 +101,62 @@
   --border: 1px;
   --depth: 0;
   --noise: 0.15;
+}
+
+@plugin "daisyui/theme" {
+  name: "kongekampen";
+
+  /* --- Base Colors (Foundation) --- */
+  /* #FFEDDA - Warm Cream */
+  --color-base-100: oklch(95.12% 0.02 81.33);      
+  /* Derived slightly darker shades for depth */
+  --color-base-200: oklch(92% 0.02 81.33);         
+  --color-base-300: oklch(88% 0.02 81.33);         
+  /* #000000 - Brand Text */
+  --color-base-content: oklch(0% 0 0);             
+
+  /* --- Core Brand Palette --- */
+  /* Primary: #ff2442 (High-energy Red) */
+  --color-primary: oklch(0.6422 0.2439 22.11);
+  --color-primary-content: oklch(100% 0 0);        /* White for better legibility on red */
+
+  /* Secondary: #FFB830 (Warm Gold) */
+  --color-secondary: oklch(81.82% 0.17 82.59);
+  --color-secondary-content: oklch(0% 0 0);        /* Black text for gold contrast */
+
+  /* Accent: #0059E7 (Brand Blue) */
+  --color-accent: oklch(48.18% 0.26 263.14);
+  --color-accent-content: oklch(100% 0 0);         /* White for blue contrast */
+
+  /* --- Neutral & UI Elements --- */
+  /* Deep Charcoal to ground the bright brand colors */
+  --color-neutral: oklch(25% 0.01 81.33);          
+  --color-neutral-content: oklch(95.12% 0.02 81.33);
+
+  /* --- Technical Status Colors --- */
+  /* Info: Linked to Brand Blue */
+  --color-info: oklch(48.18% 0.26 263.14);         
+  --color-info-content: oklch(100% 0 0);
+
+  /* Success: High-energy emerald that matches the palette vibrancy */
+  --color-success: oklch(70% 0.18 145);            
+  --color-success-content: oklch(0% 0 0);
+
+  /* Warning: Linked to Secondary Gold */
+  --color-warning: oklch(81.82% 0.17 82.59);       
+  --color-warning-content: oklch(0% 0 0);
+
+  /* Error: Linked to Primary Red */
+  --color-error: oklch(62.83% 0.22 31.91);         
+  --color-error-content: oklch(100% 0 0);
+
+  /* --- Industrial/Competitive Geometry --- */
+  --radius-selector: 0.1rem;
+  --radius-field: 0rem; 
+  --radius-box: 0.2rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0.02;
 }

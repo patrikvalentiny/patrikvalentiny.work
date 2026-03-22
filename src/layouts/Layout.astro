@@ -7,6 +7,8 @@ interface Props {
 	canonical?: string;
 	image?: string;
 	theme?: string;
+	icon?: string;
+	iconIco?: string;
 }
 
 const {
@@ -15,6 +17,8 @@ const {
 	canonical = "https://patrikvalentiny.work",
 	image = "https://patrikvalentiny.work/og-image.jpg",
 	theme,
+	icon = "/favicon.svg",
+	iconIco = "/favicon.ico",
 } = Astro.props as Props;
 ---
 
@@ -65,8 +69,12 @@ const {
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={image} />
 
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link
+			rel="icon"
+			type={icon.endsWith(".svg") ? "image/svg+xml" : "image/png"}
+			href={icon}
+		/>
+		<link rel="icon" href={iconIco} />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/site.webmanifest" />
 
@@ -134,7 +142,7 @@ const {
 			)
 		}
 	</head>
-	<body class="min-h-screen bg-base-100 text-base-content">
+	<body class="min-h-screen bg-base-200 text-base-content">
 		<slot />
 	</body>
 </html>

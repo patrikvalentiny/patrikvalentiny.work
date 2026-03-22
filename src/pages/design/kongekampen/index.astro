@@ -1,0 +1,22 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import KongekampenCaseStudy from "../../../features/design/kongekampen/KongekampenCaseStudy";
+
+const title = "Kongekampen Brand Identity | Patrik Valentiny";
+const description =
+  "A complete brand identity redesign for Kongekampen, Education Esbjerg's largest student sports event. Exploring social-first design, typography, and a new high-impact color palette.";
+const canonical = "https://patrikvalentiny.work/design/kongekampen";
+const image = "/kongekampen/screen.png"; // You would need this asset
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={canonical}
+  image={image}
+  theme="kongekampen"
+  icon="/kongekampen.png"
+  iconIco="/kongekampen.ico"
+>
+  <KongekampenCaseStudy client:load />
+</Layout>
