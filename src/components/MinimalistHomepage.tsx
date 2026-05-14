@@ -22,10 +22,6 @@ const shellClass = "relative min-h-screen overflow-hidden bg-base-100 text-base-
 const topGlowClass = "pointer-events-none absolute inset-x-0 top-0 h-72 bg-linear-to-b from-accent/10 to-transparent";
 const gridTextureClass = "pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-size-[18px_18px] opacity-20";
 const headerBadgeClass = "badge badge-outline border-accent/70 bg-transparent px-4 py-3 text-md tracking-wide uppercase text-accent";
-const mutedBadgeClass = "badge badge-ghost border border-base-content/10 bg-base-200/40 text-base-content/70";
-const accentBadgeClass = "badge badge-soft border border-accent/20 bg-accent/10 text-accent";
-const primaryButtonClass = "btn rounded-none border-0 bg-accent px-8 text-accent-content hover:bg-accent/90";
-const secondaryButtonClass = "btn btn-ghost rounded-none border border-base-content/10 px-8 text-base-content/80 hover:border-accent/40 hover:bg-base-200/40 hover:text-accent";
 const socialButtonClass = "btn btn-ghost";
 
 export default function MinimalistHomepage(): JSX.Element {
@@ -42,8 +38,8 @@ export default function MinimalistHomepage(): JSX.Element {
                 <header className="flex items-start justify-between gap-4">
                     <div className="space-y-2">
                         <span className={headerBadgeClass}>Patrik Valentiny</span>
-                        <p className="max-w-md text-sm leading-6 text-base-content/70 sm:text-base">
-                            Developer and creative technologist based in Esbjerg, DK
+                        <p className="text-sm leading-6 text-base-content/70 sm:text-base">
+                            Developer and creative technologist based in Copenhagen, DK
                         </p>
                     </div>
 
@@ -100,7 +96,7 @@ export default function MinimalistHomepage(): JSX.Element {
                                 <img
                                     src="/profile-image.jpg"
                                     alt="Portrait of Patrik Valentiny"
-                                    className="absolute inset-0 h-full w-full object-cover object-center"
+                                    className="absolute inset-0 h-full w-full object-cover object-top"
                                 />
                                 <div className="absolute inset-0 bg-linear-to-br from-base-100/25 via-accent/10 to-error/15" />
                                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(255,90,123,0.18),transparent_36%),radial-gradient(circle_at_30%_75%,rgba(248,197,143,0.14),transparent_40%)]" />
