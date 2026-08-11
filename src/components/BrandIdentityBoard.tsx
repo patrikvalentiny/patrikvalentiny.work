@@ -259,7 +259,7 @@ export default function BrandIdentityBoard() {
                                     <p className="text-xs tracking-[0.35em] text-base-content/45 uppercase">
                                         {typeCard.label}
                                     </p>
-                                    <h3 className="text-4xl leading-none font-bebas tracking-[0.05em] text-base-content sm:text-5xl">
+                                    <h3 className="text-4xl leading-none font-bebas tracking-wider text-base-content sm:text-5xl">
                                         {typeCard.title}
                                     </h3>
                                     <p className="max-w-md text-sm leading-7 text-base-content/70 sm:text-base">
@@ -293,7 +293,7 @@ export default function BrandIdentityBoard() {
                                         <p className="text-xs tracking-[0.4em] text-base-content/45 uppercase">
                                             Phase {principle.accent === "Bronze" ? "01" : "02"}
                                         </p>
-                                        <h3 className={`mt-3 max-w-md text-4xl leading-[0.95] font-bebas tracking-[0.05em] ${principle.accent === "Bronze" ? "text-primary" : "text-accent"}`}>
+                                        <h3 className={`mt-3 max-w-md text-4xl leading-[0.95] font-bebas tracking-wider ${principle.accent === "Bronze" ? "text-primary" : "text-accent"}`}>
                                             {principle.title}
                                         </h3>
                                         <p className="mt-5 max-w-md text-sm leading-7 text-base-content/70 sm:text-base">

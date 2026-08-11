@@ -9,6 +9,7 @@ interface Props {
 	theme?: string;
 	icon?: string;
 	iconIco?: string;
+	header?: boolean;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
 	theme,
 	icon = "/favicon.png",
 	iconIco = "/favicon.ico",
+	header = false,
 } = Astro.props as Props;
 ---
 
@@ -145,6 +147,21 @@ const {
 		}
 	</head>
 	<body class="min-h-screen bg-base-200 text-base-content">
-		<slot />
+		{header && 
+			(
+				<header class="flex items-center justify-center gap-4 top-0 fixed w-full max-w-full z-50 bg-transparent">
+					<div class="flex items-start justify-between backdrop-blur-sm p-4 w-full max-w-4xl rounded-lg border border-base-content/10 m-2">
+					<div class="space-y-2">
+						<span class="badge badge-outline border-accent/70 bg-transparent px-4 py-3 text-md tracking-wide uppercase text-accent">
+							Patrik Valentiny
+						</span>
+						<p class="text-sm leading-6 text-base-content/70 sm:text-base">
+							Developer and creative based in Copenhagen, DK
+						</p>
+					</div>
+					</div>
+				</header>
+		)}
+		<slot/>
 	</body>
 </html>

@@ -18,7 +18,7 @@ const socialLinks = [
     },
 ];
 
-const shellClass = "relative min-h-screen overflow-hidden bg-base-100 text-base-content";
+const shellClass = "relative  overflow-hidden min-h-dvh bg-base-100 text-base-content pt-20";
 const topGlowClass = "pointer-events-none absolute inset-x-0 top-0 h-72 bg-linear-to-b from-accent/10 to-transparent";
 const gridTextureClass = "pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-size-[18px_18px] opacity-20";
 const headerBadgeClass = "badge badge-outline border-accent/70 bg-transparent px-4 py-3 text-md tracking-wide uppercase text-accent";
@@ -34,24 +34,10 @@ export default function MinimalistHomepage(): JSX.Element {
             }}>
             <div className={gridTextureClass} />
             <div className={topGlowClass} />
-            <section className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-between px-5 py-6 sm:px-8 lg:px-10">
-                <header className="flex items-start justify-between gap-4">
-                    <div className="space-y-2">
-                        <span className={headerBadgeClass}>Patrik Valentiny</span>
-                        <p className="text-sm leading-6 text-base-content/70 sm:text-base">
-                            Developer and creative technologist based in Copenhagen, DK
-                        </p>
-                    </div>
-
-                    {/* <div className="hidden items-center gap-3 lg:flex">
-                        <span className={mutedBadgeClass}>Selected work</span>
-                        <span className={accentBadgeClass}>Open for projects</span>
-                    </div> */}
-                </header>
-
-                <div className="grid flex-1 items-center gap-10 pb-10 pt-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 lg:pt-0">
+            <section className="relative mx-auto flex min-h-dvh w-full max-w-7xl flex-col justify-between px-5 py-6 sm:px-8 lg:px-10">
+                <div className="grid flex-1 items-center gap-10 pt-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 lg:pt-0">
                     <div className="max-w-5xl space-y-8">
-                        <h1 className="max-w-4xl text-balance text-[clamp(4.25rem,14vw,10rem)] uppercase leading-[0.9] tracking-[-0.05em] text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-accent/50">
+                        <h1 className="max-w-4xl text-balance text-[clamp(4.25rem,14vw,10rem)] uppercase leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-accent/50">
                             Creating the unknown.
                         </h1>
 
@@ -110,6 +96,15 @@ export default function MinimalistHomepage(): JSX.Element {
                             <div></div>
                             <div></div>
                         </div>
+                    </div>
+
+                </div>
+                <div className="grid flex-1 grid-cols-2 w-full gap-4 mt-10 lg:mt-0">
+                    <div className="bg-primary/30 rounded-lg">
+                        Dev
+                    </div>
+                    <div className="bg-accent/30 rounded-lg">
+                        Creative
                     </div>
                 </div>
             </section>

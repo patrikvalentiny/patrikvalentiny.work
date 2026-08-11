@@ -15,8 +15,8 @@ const KongekampenCaseStudy: React.FC = () => {
         <main data-theme="kongekampen" className="min-h-screen bg-base-100 text-base-content transition-colors duration-500">
             {/* Hero Blog Header */}
             <header className="pt-32 pb-16 px-6 md:px-12 max-w-5xl mx-auto text-center relative selection:bg-primary selection:text-primary-content">
-                <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[150%] bg-primary opacity-5 blur-3xl rounded-full mix-blend-multiply pointer-events-none"></div>
-                <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[150%] bg-secondary opacity-5 blur-3xl rounded-full mix-blend-multiply pointer-events-none"></div>
+                <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[150%] bg-primary opacity-5 blur-3xl rounded-full mix-blend-multiply pointer-events-none"></div>
+                <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[150%] bg-secondary opacity-5 blur-3xl rounded-full mix-blend-multiply pointer-events-none"></div>
 
                 <div className="relative z-10">
                     <div className="badge badge-primary badge-outline mb-6 p-4 text-xs font-bold tracking-[0.2em] uppercase">
