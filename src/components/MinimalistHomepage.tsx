@@ -99,14 +99,14 @@ export default function MinimalistHomepage(): JSX.Element {
                     </div>
 
                 </div>
-                <div className="grid flex-1 grid-cols-2 w-full gap-4 mt-10 lg:mt-0">
+                {/* <div className="grid flex-1 grid-cols-2 w-full gap-4 mt-10 lg:mt-0">
                     <div className="bg-primary/30 rounded-lg">
                         Dev
                     </div>
                     <div className="bg-accent/30 rounded-lg">
                         Creative
                     </div>
-                </div>
+                </div> */}
             </section>
         </main>
     );
