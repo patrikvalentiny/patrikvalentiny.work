@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from "iconoir-react";
+import { Github, Instagram, Linkedin, GitBranch } from "iconoir-react";
 
 const socialLinks = [
     {
@@ -99,14 +99,93 @@ export default function MinimalistHomepage(): JSX.Element {
                     </div>
 
                 </div>
-                {/* <div className="grid flex-1 grid-cols-2 w-full gap-4 mt-10 lg:mt-0">
-                    <div className="bg-primary/30 rounded-lg">
-                        Dev
+                <section className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-base-300/60 bg-base-100/80 shadow-[0_24px_60px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.8),transparent_42%)]" />
+                    <div className="relative grid items-center gap-5 px-5 py-5 sm:px-6 sm:py-6 md:grid-cols-[1.2fr_0.8fr] md:gap-6 md:px-7 md:py-6">
+                        <div className="space-y-4">
+                            <div className="flex flex-wrap items-center gap-2">
+                                <span className="badge badge-outline badge-sm border-base-content/20 bg-transparent px-2.5 text-[10px] uppercase tracking-[0.18em] text-base-content/80">
+                                    Showcase
+                                </span>
+                                <span className="badge badge-success badge-sm gap-1 px-2.5 text-[10px] uppercase tracking-[0.16em]">
+                                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-success-content" />
+                                    Production
+                                </span>
+                            </div>
+
+                            <div className="space-y-2">
+                                <h2 className="text-2xl font-black uppercase leading-none text-base-content sm:text-3xl">
+                                    SU Holidays Generator
+                                </h2>
+                                <p className="max-w-xl text-sm leading-6 text-base-content/70 sm:text-[0.96rem]">
+                                    A privacy-first PDF workflow for students managing SU paperwork, built to simplify a repetitive process without adding friction.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-base-content/55">
+                                <span>React</span>
+                                <span className="text-base-content/30">•</span>
+                                <span>Client-side PDF</span>
+                                <span className="text-base-content/30">•</span>
+                                <span>Accessibility</span>
+                            </div>
+
+                            <div className="flex flex-wrap gap-2 pt-1">
+                                <a
+                                    href="https://su-holidays.patrikvalentiny.work"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="btn btn-accent btn-sm h-10 min-h-10 px-4 text-xs font-semibold uppercase tracking-[0.12em] text-accent-content"
+                                >
+                                    Explore
+                                </a>
+                                <a
+                                    href="https://github.com/patrikvalentiny/su-holidays"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="btn btn-outline btn-sm h-10 min-h-10 px-4 text-xs font-semibold uppercase tracking-[0.12em]"
+                                    aria-label="View on GitHub"
+                                >
+                                    <Github className="size-3.5" />
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="relative rounded-xl border border-base-content/10 bg-base-200/60 p-3 shadow-inner shadow-base-content/5">
+                            <div className="mb-3 flex items-center justify-between">
+                                <div className="flex gap-1.5">
+                                    <span className="h-2.5 w-2.5 rounded-full bg-base-content/25" />
+                                    <span className="h-2.5 w-2.5 rounded-full bg-base-content/25" />
+                                    <span className="h-2.5 w-2.5 rounded-full bg-base-content/25" />
+                                </div>
+                                <span className="text-[10px] uppercase tracking-[0.18em] text-base-content/45">PDF</span>
+                            </div>
+
+                            <div className="space-y-2">
+                                <div className="rounded-lg bg-base-100 p-3 shadow-sm">
+                                    <div className="mb-2 h-2 w-20 rounded-full bg-primary/20" />
+                                    <div className="space-y-2">
+                                        <div className="h-2 w-full rounded-full bg-base-content/10" />
+                                        <div className="h-2 w-5/6 rounded-full bg-base-content/10" />
+                                        <div className="h-2 w-2/3 rounded-full bg-base-content/10" />
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-2">
+                                    <div className="rounded-lg bg-primary/8 p-2.5">
+                                        <div className="text-[10px] uppercase tracking-[0.14em] text-base-content/50">Users</div>
+                                        <div className="mt-1 text-xl font-black text-primary">200+</div>
+                                    </div>
+                                    <div className="rounded-lg bg-accent/8 p-2.5">
+                                        <div className="text-[10px] uppercase tracking-[0.14em] text-base-content/50">Exports</div>
+                                        <div className="mt-1 text-xl font-black text-accent">50+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="bg-accent/30 rounded-lg">
-                        Creative
-                    </div>
-                </div> */}
+                </section>
             </section>
         </main>
     );
