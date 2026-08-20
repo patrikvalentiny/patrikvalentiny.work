@@ -1,4 +1,5 @@
-import { Github, Instagram, Linkedin, GitBranch } from "iconoir-react";
+import { Github, Instagram, Linkedin } from "iconoir-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 const socialLinks = [
     {
@@ -23,8 +24,12 @@ const topGlowClass = "pointer-events-none absolute inset-x-0 top-0 h-72 bg-linea
 const gridTextureClass = "pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-size-[18px_18px] opacity-20";
 const headerBadgeClass = "badge badge-outline border-accent/70 bg-transparent px-4 py-3 text-md tracking-wide uppercase text-accent";
 const socialButtonClass = "btn btn-ghost";
+const springTransition = { type: "spring", stiffness: 120, damping: 20 } as const;
+const easeTransition = { duration: 0.55, ease: [0.16, 1, 0.3, 1] } as const;
 
 export default function MinimalistHomepage(): JSX.Element {
+    const shouldReduceMotion = useReducedMotion();
+
     return (
         <main className={shellClass}
             style={{
@@ -32,20 +37,36 @@ export default function MinimalistHomepage(): JSX.Element {
                     "radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--color-primary) 14%, transparent) 1px, transparent 0)",
                 backgroundSize: "26px 26px",
             }}>
+            <motion.div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-24 top-24 h-64 w-64 rounded-full bg-accent/12 blur-3xl"
+                animate={shouldReduceMotion ? undefined : { x: [0, 24, 0], y: [0, -20, 0], opacity: [0.3, 0.55, 0.3] }}
+                transition={shouldReduceMotion ? undefined : { duration: 9, repeat: Infinity, ease: "easeInOut" }}
+            />
             <div className={gridTextureClass} />
             <div className={topGlowClass} />
             <section className="relative mx-auto flex min-h-dvh w-full max-w-7xl flex-col justify-between px-5 py-6 sm:px-8 lg:px-10">
                 <div className="grid flex-1 items-center gap-10 pt-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 lg:pt-0">
                     <div className="max-w-5xl space-y-8">
-                        <h1 className="max-w-4xl text-balance text-[clamp(4.25rem,14vw,10rem)] uppercase leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-accent/50">
+                        <motion.h1
+                            initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={easeTransition}
+                            className="max-w-4xl text-balance text-[clamp(4.25rem,14vw,10rem)] uppercase leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-accent/50"
+                        >
                             Creating the unknown.
-                        </h1>
+                        </motion.h1>
 
-                        <p className="max-w-2xl text-pretty text-lg leading-8 text-base-content/75 sm:text-xl technical-spec">
+                        <motion.p
+                            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={shouldReduceMotion ? undefined : { ...easeTransition, delay: 0.12 }}
+                            className="max-w-2xl text-pretty text-lg leading-8 text-base-content/75 sm:text-xl technical-spec"
+                        >
                             Slovak-born. Denmark-based. Bridging the gap between raw
                             hardware logic and cinematic human experience. I build
                             systems that scale and capture light that moves.
-                        </p>
+                        </motion.p>
 
                         {/* <div className="flex flex-wrap items-center gap-4 pt-2">
                             <a className={primaryButtonClass} href="/brand-identity">
@@ -56,28 +77,43 @@ export default function MinimalistHomepage(): JSX.Element {
                             </a>
                         </div> */}
 
-                        <div className="flex flex-wrap gap-3 pt-4">
-                            {socialLinks.map((link) => {
+                        <motion.div
+                            initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={shouldReduceMotion ? undefined : { ...easeTransition, delay: 0.2 }}
+                            className="flex flex-wrap gap-3 pt-4"
+                        >
+                            {socialLinks.map((link, index) => {
                                 const Icon = link.icon;
 
                                 return (
-                                    <a
+                                    <motion.a
                                         key={link.label}
                                         className={socialButtonClass}
                                         href={link.href}
                                         target="_blank"
                                         rel="noreferrer"
                                         aria-label={link.label}
+                                        whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.02 }}
+                                        whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
+                                        initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={shouldReduceMotion ? undefined : { ...springTransition, delay: 0.22 + index * 0.06 }}
                                     >
                                         <Icon className="size-4" />
                                         <span>{link.label}</span>
-                                    </a>
+                                    </motion.a>
                                 );
                             })}
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="flex justify-center lg:justify-end">
-                        <div className="hover-3d w-full max-w-96">
+                        <motion.div
+                            initial={shouldReduceMotion ? false : { opacity: 0, x: 24 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={shouldReduceMotion ? undefined : { ...easeTransition, delay: 0.1 }}
+                            className="hover-3d w-full max-w-96"
+                        >
                             <figure className="relative flex h-88 w-full items-end overflow-hidden rounded-2xl border border-base-content/10 bg-base-100 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:h-112 sm:max-w-md">
                                 <img
                                     src="/profile-image.jpg"
@@ -95,11 +131,17 @@ export default function MinimalistHomepage(): JSX.Element {
                             <div></div>
                             <div></div>
                             <div></div>
-                        </div>
+                        </motion.div>
                     </div>
 
                 </div>
-                <section className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-base-300/60 bg-base-100/80 shadow-[0_24px_60px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+                <motion.section
+                    initial={shouldReduceMotion ? false : { opacity: 0, y: 26 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.35 }}
+                    transition={easeTransition}
+                    className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-base-300/60 bg-base-100/80 shadow-[0_24px_60px_rgba(0,0,0,0.08)] backdrop-blur-sm"
+                >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.8),transparent_42%)]" />
                     <div className="relative grid items-center gap-5 px-5 py-5 sm:px-6 sm:py-6 md:grid-cols-[1.2fr_0.8fr] md:gap-6 md:px-7 md:py-6">
                         <div className="space-y-4">
@@ -131,24 +173,28 @@ export default function MinimalistHomepage(): JSX.Element {
                             </div>
 
                             <div className="flex flex-wrap gap-2 pt-1">
-                                <a
+                                <motion.a
                                     href="https://su-holidays.patrikvalentiny.work"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="btn btn-accent btn-sm h-10 min-h-10 px-4 text-xs font-semibold uppercase tracking-[0.12em] text-accent-content"
+                                    whileHover={shouldReduceMotion ? undefined : { y: -2 }}
+                                    whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                                 >
                                     Explore
-                                </a>
-                                <a
+                                </motion.a>
+                                <motion.a
                                     href="https://github.com/patrikvalentiny/su-holidays"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="btn btn-outline btn-sm h-10 min-h-10 px-4 text-xs font-semibold uppercase tracking-[0.12em]"
                                     aria-label="View on GitHub"
+                                    whileHover={shouldReduceMotion ? undefined : { y: -2 }}
+                                    whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                                 >
                                     <Github className="size-3.5" />
                                     Code
-                                </a>
+                                </motion.a>
                             </div>
                         </div>
 
@@ -185,7 +231,7 @@ export default function MinimalistHomepage(): JSX.Element {
                             </div>
                         </div>
                     </div>
-                </section>
+                </motion.section>
             </section>
         </main>
     );
