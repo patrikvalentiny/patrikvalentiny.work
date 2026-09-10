@@ -82,14 +82,6 @@ export default function MinimalistHomepage(): JSX.Element {
                             >
                                 View CV / Experience
                             </motion.a>
-                            <motion.a
-                                href="/brand-identity"
-                                className="btn btn-outline btn-sm h-11 px-4 text-xs font-semibold uppercase tracking-[0.14em]"
-                                whileHover={shouldReduceMotion ? undefined : { y: -2 }}
-                                whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
-                            >
-                                Brand Identity
-                            </motion.a>
                         </motion.div>
 
                         <motion.div
