@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CurriculumVitaeView from "../../components/CurriculumVitaeView";
+
+const title =
+    "Curriculum Vitae | Patrik Valentiny - Digitalization Engineer & Full-Stack Developer";
+const description =
+    "Official Curriculum Vitae of Patrik Valentiny. Digitalization Engineer and Full-Stack Developer with hands-on experience building backend APIs, analytics solutions, AI agents, and full-stack web applications.";
+const canonical = "https://patrikvalentiny.work/cv";
+const image = "https://patrikvalentiny.work/og-image.jpg";
+---
+
+<Layout
+    title={title}
+    description={description}
+    canonical={canonical}
+    image={image}
+    header={true}
+    theme="performanceDark"
+>
+    <script type="application/ld+json" slot="head">
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "mainEntity": {
+                "@type": "Person",
+                "name": "Patrik Valentiny",
+                "jobTitle": "Digitalization Engineer & Full-Stack Developer",
+                "url": "https://patrikvalentiny.work",
+                "email": "patrikeyvalentiny@gmail.com",
+                "telephone": "+4571407231",
+                "sameAs": [
+                    "https://www.linkedin.com/in/patrikvalentiny/",
+                    "https://github.com/patrikvalentiny"
+                ],
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Siemens Gamesa"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Copenhagen",
+                    "addressCountry": "DK"
+                },
+                "alumniOf": [
+                    {
+                        "@type": "EducationalOrganization",
+                        "name": "Syddansk Erhvervsakademi",
+                        "location": "Esbjerg, Denmark"
+                    }
+                ],
+                "knowsAbout": [
+                    "Software Engineering",
+                    "Full-Stack Development",
+                    "C# (.NET)",
+                    "React",
+                    "Angular",
+                    "Python",
+                    "SQL Server",
+                    "PostgreSQL",
+                    "Power Platform",
+                    "Mendix",
+                    "AI Agents",
+                    "AutoGen",
+                    "ChromaDB",
+                    "RAG",
+                    "DevOps",
+                    "Docker",
+                    "Cybersecurity",
+                    "Astro",
+                    "TypeScript"
+                ]
+            }
+        }
+    </script>
+    <CurriculumVitaeView client:load />
+</Layout>

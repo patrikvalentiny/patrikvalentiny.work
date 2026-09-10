@@ -68,20 +68,35 @@ export default function MinimalistHomepage(): JSX.Element {
                             systems that scale and capture light that moves.
                         </motion.p>
 
-                        {/* <div className="flex flex-wrap items-center gap-4 pt-2">
-                            <a className={primaryButtonClass} href="/brand-identity">
-                                View brand identity
-                            </a>
-                            <a className={secondaryButtonClass} href="/su-holidays">
-                                SU holidays
-                            </a>
-                        </div> */}
+                        <motion.div
+                            initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={shouldReduceMotion ? undefined : { ...easeTransition, delay: 0.16 }}
+                            className="flex flex-wrap items-center gap-3 pt-2"
+                        >
+                            <motion.a
+                                href="/cv"
+                                className="btn btn-accent btn-sm h-11 px-5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-content"
+                                whileHover={shouldReduceMotion ? undefined : { y: -2 }}
+                                whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
+                            >
+                                View CV / Experience
+                            </motion.a>
+                            <motion.a
+                                href="/brand-identity"
+                                className="btn btn-outline btn-sm h-11 px-4 text-xs font-semibold uppercase tracking-[0.14em]"
+                                whileHover={shouldReduceMotion ? undefined : { y: -2 }}
+                                whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
+                            >
+                                Brand Identity
+                            </motion.a>
+                        </motion.div>
 
                         <motion.div
                             initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={shouldReduceMotion ? undefined : { ...easeTransition, delay: 0.2 }}
-                            className="flex flex-wrap gap-3 pt-4"
+                            className="flex flex-wrap gap-3 pt-2"
                         >
                             {socialLinks.map((link, index) => {
                                 const Icon = link.icon;

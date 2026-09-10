@@ -91,27 +91,42 @@ const {
 					"https://github.com/patrikvalentiny",
 					"https://www.instagram.com/patrikvalentiny/"
 				],
-				"jobTitle": "Developer and creative technologist",
+				"jobTitle": "Digitalization Engineer & Full-Stack Developer",
 				"worksFor": {
-					"@type": "SelfEmployed"
+					"@type": "Organization",
+					"name": "Siemens Gamesa"
 				},
 				"address": {
 					"@type": "PostalAddress",
-					"addressLocality": "Copenhagen",
-					"addressRegion": "Capital Region",
+					"addressLocality": "Vejle",
 					"addressCountry": "DK"
 				},
 				"knowsAbout": [
-					"Web Development",
-					"Video Production",
-					"Photography",
-					"Creative Direction",
-					"Astro",
-					"React",
-					"TypeScript",
 					"Software Engineering",
-					"Creative Technology",
+					"Digitalization",
+					"Full-Stack Web Development",
+					"C# (.NET)",
+					"React",
+					"Angular",
+					"Python",
+					"SQL Server",
+					"PostgreSQL",
+					"Power Platform",
+					"Mendix",
+					"Machine Learning",
+					"AI Agents",
+					"RAG",
+					"AutoGen",
+					"Astro",
+					"TypeScript",
+					"DevOps",
+					"Docker",
+					"Cybersecurity"
 				],
+				"mainEntityOfPage": {
+					"@type": "ProfilePage",
+					"@id": "https://patrikvalentiny.work/cv"
+				},
 				"image": "https://patrikvalentiny.work/profile-image.jpg"
 			}
 		</script>
@@ -147,21 +162,33 @@ const {
 		}
 	</head>
 	<body class="min-h-screen bg-base-200 text-base-content">
-		{header && 
-			(
+		{
+			header && (
 				<header class="flex items-center justify-center gap-4 top-0 fixed w-full max-w-full z-50 bg-transparent">
-					<div class="flex items-start justify-between backdrop-blur-sm p-4 w-full max-w-4xl rounded-lg border border-base-content/10 m-2">
-					<div class="space-y-2">
-						<span class="badge badge-outline border-accent/70 bg-transparent px-4 py-3 text-md tracking-wide uppercase text-accent">
-							Patrik Valentiny
-						</span>
-						<p class="text-sm leading-6 text-base-content/70 sm:text-base">
-							Developer and creative based in Copenhagen, DK
-						</p>
-					</div>
+					<div class="flex items-center justify-between backdrop-blur-md bg-base-100/70 p-3 sm:p-4 w-full max-w-4xl rounded-xl border border-base-content/10 m-2 shadow-lg">
+						<a
+							href="/"
+							class="group flex items-center gap-3 transition-opacity hover:opacity-90"
+						>
+							<span class="badge badge-outline border-accent/70 bg-transparent px-3 py-2 text-xs sm:text-sm tracking-wide uppercase text-accent font-semibold group-hover:bg-accent/10 transition-colors">
+								Patrik Valentiny
+							</span>
+							<span class="hidden sm:inline text-xs text-base-content/70 font-mono">
+								Performance Architect
+							</span>
+						</a>
+						<div class="flex items-center gap-2">
+							<a
+								href="/"
+								class="btn btn-ghost btn-sm h-8 px-3 text-xs uppercase tracking-wider font-mono"
+							>
+								Home
+							</a>
+						</div>
 					</div>
 				</header>
-		)}
-		<slot/>
+			)
+		}
+		<slot />
 	</body>
 </html>
